@@ -19,10 +19,11 @@ class punto {
         $this->Y = $Y;
     }
 
-    public function movimientoRelativo(int $direccionx, int $direcciony){
-        $this->x += $direccionx;
-        $this->y += $direcciony;
+    public function movimientoRelativo(int $x, int $y){
+        $this->x += $x;
+        $this->y += $y;
     }
+
 
     public function Posicion(){
         return[
