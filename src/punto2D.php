@@ -45,5 +45,38 @@ class punto2D implements punto{
         $this->moveTo($x, $y) - $py;
         return sqrt($x**2+$y**2);
     }
+
+    public function isUpper(punto $p){
+        [$px, $py] = $p->getPosition();
+        return ($this->y < $py && $this->x == $px);
+    }
+    public function isUnder(punto $p){
+        [$px, $py] = $p->getPosition();
+        return ($this->y > $py && $this->x == $px);
+    }
+    public function isLeft(punto $p){
+        [$px, $py] = $p->getPosition();
+        return ($this->x > $px && $this->y == $py);
+    }
+    public function isRight(punto $p){
+        [$px, $py] = $p->getPosition();
+        return ($this->x < $px && $this->y == $py);
+    }
+    public function isUpperLeft(punto $p){
+        [$px, $py] = $p->getPosition();
+        return ($this->x > $px && $this->y < $p);
+    }
+    public function isUpperRight(punto $p){
+        [$px, $py] = $p->getPosition();
+        return ($this->x < $px && $this->y < $p);
+    }
+    public function isUnderRight(punto $p){
+        [$px, $py] = $p->getPosition();
+        return ($this->x < $px && $this->y > $p);
+    }
+    public function isUnderLeft(punto $p){
+        [$px, $py] = $p->getPosition();
+        return ($this->x > $px && $this->y > $p);
+    }
 }
 ?>

@@ -19,6 +19,4 @@ interface puntoV2 {
     public function getPosition():array;
     public function toDistance();
 }
-
-
 ?>
