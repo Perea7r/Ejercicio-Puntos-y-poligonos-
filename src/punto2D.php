@@ -1,6 +1,7 @@
 <?php
 namespace DAW\PROG\PUNTO2D;
-use DAW\PROG\PUNTO\puntoV2; 
+use DAW\PROG\PUNTO\puntoV2;
+use PROG\DAW\PUNTOS\punto;
 
 class punto2D implements punto{
     private int $x;

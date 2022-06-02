@@ -17,10 +17,10 @@ abstract class poligono{
     }
 
     protected function addPoint(punto $p){
-        if (!$this->validateNewPoint())
+        if (!$this->validateNewPoint($p))
             throw new \Exception("No puedo añadir un nuevo punto: Max Points" . $this->getMaxPoints());
         $this->puntos[] = $p;
-        $this->numPuntos++;
     }
 }
+
 ?>

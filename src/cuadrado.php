@@ -46,7 +46,14 @@ class cuadrado extends poligono{
     }
 
     public function validateNewPoint():bool{
-        
+        if ($this->getNumPoints()==0)
+            return true;
+        elseif ($this->getNumPoints()==1)
+            return $this->puntos[0]->isLeft($p);
+        elseif ($this->getNumPoints()==2)
+            return $this->puntos[1]->isUpper($p);
+        elseif ($this->getNumPoints()==3)
+            return $this->puntos[2]->isRight($p) && $this->puntos[0] ->isUpper($p);
     }
 }
 
